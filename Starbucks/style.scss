@@ -1,0 +1,237 @@
+//varebile
+$fontColor: #333;
+$dinamicColor: #017143;
+
+//mixin
+@mixin mobile {
+    @media screen and (max-width:676px) {
+        @content;
+    }
+}
+
+%Flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins' , 'sans-serif';
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 10px;
+    @extend %Flex;
+
+
+    header{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        .fa-bars{
+            font-size: 2em;
+            color: $fontColor;
+            display: none;
+            cursor: pointer;
+        }
+
+        .logo{
+            width: 30%;
+
+            img{
+                max-width: 80px;
+            }
+        }
+
+        nav{
+            transition: all .7s;
+
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+
+                li{
+                    list-style-type: none;
+                    transition: all .5s;
+
+                    &:hover{
+                        background-color: #fff;
+                    }
+
+                    a{
+                        color: $fontColor;
+                        display: inline-block;
+                        padding: 5px;
+                        text-decoration: none;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .Box{
+        position: absolute;
+        left: 0px;
+        top: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        .Boxtext{
+            width: 50%;
+    
+            h2{
+                font-size: 3em;
+                color: $fontColor;
+                text-transform: capitalize;
+                font-weight: 600;
+                
+                span{
+                    color: $dinamicColor;
+                    font-size: 1.2em;
+                    font-weight: 700;
+                }
+            }
+    
+            p{
+                font-size: 1em;
+                line-height:30px;
+                font-weight: 500;
+            }
+    
+            .button{
+                width: 150px;
+                background: #017143;
+                text-align: center;
+                border-radius: 40px;
+                padding: 5px;
+                margin-top: 30px;
+                text-transform: uppercase;
+    
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .Boximg{
+            max-width: 40%;
+
+            img{
+                max-width: 300px;
+            }
+        }
+    }
+
+    .thumb{
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+
+        li{
+            list-style-type: none;
+            cursor: pointer;
+            transition: 1s;
+
+            img{
+                max-width: 60px;
+                margin: 0 10px;
+            }
+
+            &:hover img{
+                transform: translateY(-20px);
+            }
+        }
+    }
+
+    .circle{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $dinamicColor;
+        z-index: -1;
+        clip-path: circle(600px at right 800px);
+    }
+}
+
+//media query
+
+@include mobile(){
+    section{
+        header{
+        
+            .fa-bars{display: block;}
+            
+            nav{
+                width: 100%;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                height: calc(100vh - 100px);
+                background: $dinamicColor;
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                transform: translateX(-100%);
+    
+                ul{
+                    width: 100%;
+                    flex-direction: column;
+    
+                    li{
+                    
+                        text-align: center;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .transform{transform: translateX(0);}
+        }
+        .Box{
+            flex-direction: column;
+            align-items: center;
+
+            .Boxtext{
+                width: 100%;
+            }
+
+            .Boximg{
+                width: 100%;
+                margin: 50px 0 0;
+
+                img{
+                    max-width: 250px;
+                }
+            }
+        }
+        .thumb{
+            bottom: -345px;
+        }
+        .circle{
+            bottom: -360px;
+        }
+    }
+
+}

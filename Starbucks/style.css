@@ -1,0 +1,256 @@
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Poppins' , 'sans-serif';
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 10px;
+}
+
+section header {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+section header .fa-bars {
+  font-size: 2em;
+  color: #333;
+  display: none;
+  cursor: pointer;
+}
+
+section header .logo {
+  width: 30%;
+}
+
+section header .logo img {
+  max-width: 80px;
+}
+
+section header nav {
+  -webkit-transition: all .7s;
+  transition: all .7s;
+}
+
+section header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section header nav ul li {
+  list-style-type: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+section header nav ul li:hover {
+  background-color: #fff;
+}
+
+section header nav ul li a {
+  color: #333;
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+section .Box {
+  position: absolute;
+  left: 0px;
+  top: 120px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+section .Box .Boxtext {
+  width: 50%;
+}
+
+section .Box .Boxtext h2 {
+  font-size: 3em;
+  color: #333;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+section .Box .Boxtext h2 span {
+  color: #017143;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+section .Box .Boxtext p {
+  font-size: 1em;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+section .Box .Boxtext .button {
+  width: 150px;
+  background: #017143;
+  text-align: center;
+  border-radius: 40px;
+  padding: 5px;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+section .Box .Boxtext .button a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+section .Box .Boximg {
+  max-width: 40%;
+}
+
+section .Box .Boximg img {
+  max-width: 300px;
+}
+
+section .thumb {
+  position: absolute;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .thumb li {
+  list-style-type: none;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section .thumb li img {
+  max-width: 60px;
+  margin: 0 10px;
+}
+
+section .thumb li:hover img {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+section .circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #017143;
+  z-index: -1;
+  -webkit-clip-path: circle(600px at right 800px);
+          clip-path: circle(600px at right 800px);
+}
+
+@media screen and (max-width: 676px) {
+  section header .fa-bars {
+    display: block;
+  }
+  section header nav {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: calc(100vh - 100px);
+    background: #017143;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  section header nav ul {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section header nav ul li {
+    text-align: center;
+    padding: 10px;
+  }
+  section header .transform {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  section .Box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .Box .Boxtext {
+    width: 100%;
+  }
+  section .Box .Boximg {
+    width: 100%;
+    margin: 50px 0 0;
+  }
+  section .Box .Boximg img {
+    max-width: 250px;
+  }
+  section .thumb {
+    bottom: -345px;
+  }
+  section .circle {
+    bottom: -360px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
