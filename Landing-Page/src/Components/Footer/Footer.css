@@ -1,0 +1,33 @@
+.nav-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.list-footer{
+    list-style: none;
+}
+
+.list-footer li a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.socil-media{
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.socil-media h1{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.list-media-footer{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

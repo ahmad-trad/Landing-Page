@@ -1,0 +1,16 @@
+.link{
+    padding: 5px;
+    transition: all ease-in 150ms;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+}
+
+.link.active{
+    border-bottom-color:  #000;
+}
+
+.link:hover{
+    border-bottom-color:  #000;
+}
+

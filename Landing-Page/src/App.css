@@ -1,0 +1,32 @@
+.hero{
+  width: 100%;
+  height: 700px;
+  background-image: url("./assets/image 1.jpg");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: .50rem;
+}
+
+.content-hero{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content-hero h1{
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 23px;
+}
+
+.content-hero p{
+  font-size: 100px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 100px;
+}
